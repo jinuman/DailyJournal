@@ -33,6 +33,8 @@
 		362D3DCB224BB70800EFBF1B /* TimelineCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D3DCA224BB70800EFBF1B /* TimelineCellViewModel.swift */; };
 		362D3DCD224BCA4D00EFBF1B /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D3DCC224BCA4D00EFBF1B /* TimelineCell.swift */; };
 		362D3DD0224BD8A200EFBF1B /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362D3DCF224BD8A200EFBF1B /* DiaryViewModel.swift */; };
+		36B9646A24692A5900D05B38 /* DiaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9646924692A5900D05B38 /* DiaryViewModelTests.swift */; };
+		36B9646D24693E9300D05B38 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B9646C24693E9300D05B38 /* R.generated.swift */; };
 		5F14A62E4B3EA2F9F90BD9E1 /* Pods_MyDiaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877AAFC402F10A7D692CFE73 /* Pods_MyDiaryTests.framework */; };
 		E33D513223F2A32800DF1497 /* SwiftyBeaverExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33D513123F2A32800DF1497 /* SwiftyBeaverExtensions.swift */; };
 		E3BC668B23F3D07E006170AE /* Pods_MyDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F0C8BD2BADB443AFE27F0D /* Pods_MyDiary.framework */; };
@@ -79,6 +81,8 @@
 		362D3DCA224BB70800EFBF1B /* TimelineCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCellViewModel.swift; sourceTree = "<group>"; };
 		362D3DCC224BCA4D00EFBF1B /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		362D3DCF224BD8A200EFBF1B /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
+		36B9646924692A5900D05B38 /* DiaryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModelTests.swift; sourceTree = "<group>"; };
+		36B9646C24693E9300D05B38 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		4C8712337F6D294E9E35081C /* Pods-MyDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDiary.debug.xcconfig"; path = "Target Support Files/Pods-MyDiary/Pods-MyDiary.debug.xcconfig"; sourceTree = "<group>"; };
 		7FEFC56A2528B64969A2CD43 /* Pods-MyDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDiaryTests.release.xcconfig"; path = "Target Support Files/Pods-MyDiaryTests/Pods-MyDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		80F0C8BD2BADB443AFE27F0D /* Pods_MyDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				362D3DAB224B90C800EFBF1B /* MyDiaryTests.swift */,
+				36B9646924692A5900D05B38 /* DiaryViewModelTests.swift */,
 				362D3DAD224B90C800EFBF1B /* Info.plist */,
 			);
 			path = MyDiaryTests;
@@ -200,6 +205,7 @@
 		362D3DC3224BA1A700EFBF1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				36B9646C24693E9300D05B38 /* R.generated.swift */,
 				36115B67229BEB740017C08A /* fonts */,
 				362D3D9D224B90C800EFBF1B /* Assets.xcassets */,
 				362D3DA2224B90C800EFBF1B /* Info.plist */,
@@ -281,6 +287,7 @@
 			buildConfigurationList = 362D3DB0224B90C800EFBF1B /* Build configuration list for PBXNativeTarget "MyDiary" */;
 			buildPhases = (
 				70348D320CEC8E247F2D51E5 /* [CP] Check Pods Manifest.lock */,
+				36B9646B24693C0500D05B38 /* Run R.Swift script */,
 				362D3D8F224B90C800EFBF1B /* Sources */,
 				362D3D90224B90C800EFBF1B /* Frameworks */,
 				362D3D91224B90C800EFBF1B /* Resources */,
@@ -303,6 +310,7 @@
 				362D3DA3224B90C800EFBF1B /* Sources */,
 				362D3DA4224B90C800EFBF1B /* Frameworks */,
 				362D3DA5224B90C800EFBF1B /* Resources */,
+				685A94EA264EA0AC42BD5EBC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,6 +406,43 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		36B9646B24693C0500D05B38 /* Run R.Swift script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run R.Swift script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/MyDiary/Resources/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/MyDiary/Resources/R.generated.swift\"\n";
+		};
+		685A94EA264EA0AC42BD5EBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyDiaryTests/Pods-MyDiaryTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyDiaryTests/Pods-MyDiaryTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyDiaryTests/Pods-MyDiaryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		70348D320CEC8E247F2D51E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,6 +501,7 @@
 				361F193C232391460052BEAF /* DiaryRepository.swift in Sources */,
 				362D3DBB224B989F00EFBF1B /* Diary.swift in Sources */,
 				362D3DBD224B99C800EFBF1B /* FoundationExtensions.swift in Sources */,
+				36B9646D24693E9300D05B38 /* R.generated.swift in Sources */,
 				362D3DCD224BCA4D00EFBF1B /* TimelineCell.swift in Sources */,
 				362D3D99224B90C800EFBF1B /* DiaryViewController.swift in Sources */,
 				E33D513223F2A32800DF1497 /* SwiftyBeaverExtensions.swift in Sources */,
@@ -473,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B9646A24692A5900D05B38 /* DiaryViewModelTests.swift in Sources */,
 				362D3DAC224B90C800EFBF1B /* MyDiaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,6 +27,12 @@ extension UIImage {
     }
 }
 
+extension Optional where Wrapped == UIImage {
+    var safeUnwrapped: UIImage {
+        return self ?? UIImage.init()
+    }
+}
+
 extension UIColor {
     static var gradientStart: UIColor {
         return .init(red: 250/255, green: 250/255, blue: 250/255, alpha: 1.0)

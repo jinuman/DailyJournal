@@ -15,7 +15,7 @@ extension DateFormatter {
         return df
     }
     
-    static let diaryFormatter: DateFormatter = DateFormatter.formatter(with: "yyyy. MM. dd. EEE")
+    static let diaryDateFormatter: DateFormatter = DateFormatter.formatter(with: "yyyy. MM. dd. EEE")
     static let ampmFormatter: DateFormatter = DateFormatter.formatter(with: "a")
     static let clockFormatter: DateFormatter = DateFormatter.formatter(with: "h:mm")
 }

@@ -82,9 +82,9 @@ class TimelineViewModel {
     }
     
     func diaryViewModel(for indexPath: IndexPath) -> DiaryViewModel {
-        let vm = DiaryViewModel(environment: environment, selectedDiary: diary(for: indexPath))
-        vm.delegate = self
-        return vm
+        let viewModel = DiaryViewModel(environment: environment, diary: diary(for: indexPath))
+        viewModel.delegate = self
+        return viewModel
     }
     
     func removeDiary(at indexPath: IndexPath) {

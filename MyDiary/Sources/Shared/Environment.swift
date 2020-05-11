@@ -13,9 +13,11 @@ class Environment {
     var settings: Settings
     let now: () -> Date
     
-    init(diaryRepository: DiaryRepository = InMemoryDiaryRepository(),
-         settings: Settings = InMemorySettings(),
-         now: @escaping () -> Date = Date.init) {
+    init(
+        diaryRepository: DiaryRepository = InMemoryDiaryRepository(),
+        settings: Settings = InMemorySettings(),
+        now: @escaping () -> Date = Date.init)
+    {
         self.diaryRepository = diaryRepository
         self.settings = settings
         self.now = now

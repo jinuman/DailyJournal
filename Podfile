@@ -10,9 +10,13 @@ target 'MyDiary' do
   # Logging
   pod 'SwiftyBeaver'
 
+  # Resources
+  pod 'R.swift'
+
   target 'MyDiaryTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Nimble'
   end
 
 end
