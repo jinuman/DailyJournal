@@ -1,5 +1,5 @@
 //
-//  SettingsController.swift
+//  SettingsViewController.swift
 //  MyDiary
 //
 //  Created by Jinwoo Kim on 28/03/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsController: UITableViewController {
+class SettingsViewController: UITableViewController {
     // MARK:- Properties
     let settingsCellId = "settingsCellId"
     var viewModel: SettingsViewModel!
@@ -28,7 +28,7 @@ class SettingsController: UITableViewController {
 }
 
 // MARK:- Regarding tableView methods
-extension SettingsController {
+extension SettingsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRows(in: section)
     }

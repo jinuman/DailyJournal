@@ -10,7 +10,7 @@
 		36115B69229BEBA30017C08A /* SSShinb7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36115B68229BEBA30017C08A /* SSShinb7.ttf */; };
 		36115B6B229BF70F0017C08A /* HoonMakdaeyunpilR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36115B6A229BF70F0017C08A /* HoonMakdaeyunpilR.ttf */; };
 		361B5999224CCCFD00ED25BA /* InMemorySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361B5998224CCCFD00ED25BA /* InMemorySettings.swift */; };
-		361B599B224CD88400ED25BA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361B599A224CD88400ED25BA /* SettingsController.swift */; };
+		361B599B224CD88400ED25BA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361B599A224CD88400ED25BA /* SettingsViewController.swift */; };
 		361B599D224CDAAE00ED25BA /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361B599C224CDAAE00ED25BA /* SettingsViewModel.swift */; };
 		361B599F224CEB6800ED25BA /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361B599E224CEB6800ED25BA /* SettingsCellViewModel.swift */; };
 		361B59A1224CF0D200ED25BA /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361B59A0224CF0D200ED25BA /* SettingsCell.swift */; };
@@ -54,7 +54,7 @@
 		36115B68229BEBA30017C08A /* SSShinb7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SSShinb7.ttf; sourceTree = "<group>"; };
 		36115B6A229BF70F0017C08A /* HoonMakdaeyunpilR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HoonMakdaeyunpilR.ttf; sourceTree = "<group>"; };
 		361B5998224CCCFD00ED25BA /* InMemorySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemorySettings.swift; sourceTree = "<group>"; };
-		361B599A224CD88400ED25BA /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		361B599A224CD88400ED25BA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		361B599C224CDAAE00ED25BA /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		361B599E224CEB6800ED25BA /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
 		361B59A0224CF0D200ED25BA /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			children = (
 				361B599C224CDAAE00ED25BA /* SettingsViewModel.swift */,
 				361B599E224CEB6800ED25BA /* SettingsCellViewModel.swift */,
-				361B599A224CD88400ED25BA /* SettingsController.swift */,
+				361B599A224CD88400ED25BA /* SettingsViewController.swift */,
 				361B59A0224CF0D200ED25BA /* SettingsCell.swift */,
 			);
 			path = Settings;
@@ -506,7 +506,7 @@
 				362D3D99224B90C800EFBF1B /* DiaryViewController.swift in Sources */,
 				E33D513223F2A32800DF1497 /* SwiftyBeaverExtensions.swift in Sources */,
 				362D3DB9224B95EF00EFBF1B /* UIKitExtensions.swift in Sources */,
-				361B599B224CD88400ED25BA /* SettingsController.swift in Sources */,
+				361B599B224CD88400ED25BA /* SettingsViewController.swift in Sources */,
 				362D3D97224B90C800EFBF1B /* AppDelegate.swift in Sources */,
 				362D3DC8224BA24300EFBF1B /* TimelineViewModel.swift in Sources */,
 				361F193E2323977A0052BEAF /* Settings.swift in Sources */,
