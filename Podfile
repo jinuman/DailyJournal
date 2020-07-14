@@ -8,15 +8,16 @@ target 'MyDiary' do
   # Pods for MyDiary
 
   # Logging
-  pod 'SwiftyBeaver'
+  pod 'SwiftyBeaver', '~> 1.9.1'
 
   # Resources
-  pod 'R.swift'
+  pod 'R.swift', '~> 5.2.0'
 
   target 'MyDiaryTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Nimble'
+    pod 'Quick', '~> 3.0.0'
+    pod 'Nimble', '~> 8.1.1'
   end
 
 end

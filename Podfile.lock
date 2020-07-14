@@ -1,29 +1,32 @@
 PODS:
-  - Nimble (8.0.5)
-  - R.swift (5.1.0):
-    - R.swift.Library (~> 5.1.0)
-  - R.swift.Library (5.1.0)
-  - SwiftyBeaver (1.7.1)
+  - Nimble (8.1.1)
+  - Quick (3.0.0)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - SwiftyBeaver (1.9.1)
 
 DEPENDENCIES:
-  - Nimble
-  - R.swift
-  - SwiftyBeaver
+  - Nimble (~> 8.1.1)
+  - Quick (~> 3.0.0)
+  - R.swift (~> 5.2.0)
+  - SwiftyBeaver (~> 1.9.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - SwiftyBeaver
   trunk:
     - Nimble
+    - Quick
     - R.swift
     - R.swift.Library
+    - SwiftyBeaver
 
 SPEC CHECKSUMS:
-  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
-  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
-  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
-  SwiftyBeaver: da5e573ad583586c18236324c36900990afe1733
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
 
-PODFILE CHECKSUM: 74953bbcc829b83c1c9a4170eeabae2191720483
+PODFILE CHECKSUM: 413d91acdf5fad1cb8e77abb5082d3961f44973d
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
