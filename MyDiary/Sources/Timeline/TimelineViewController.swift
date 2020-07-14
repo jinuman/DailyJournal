@@ -87,7 +87,7 @@ class TimelineViewController: UITableViewController {
         )
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "baseline_settings_black_24pt"),
+            image: R.image.settings_black(),
             style: .plain,
             target: self,
             action: #selector(showSettings)
@@ -185,7 +185,7 @@ extension TimelineViewController {
             success(true)
         }
         
-        removeAction.image = #imageLiteral(resourceName: "baseline_delete_white_24pt")
+        removeAction.image = R.image.delete_white()
         removeAction.backgroundColor = .red
         
         return UISwipeActionsConfiguration(actions: [removeAction])

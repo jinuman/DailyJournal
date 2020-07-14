@@ -120,7 +120,7 @@ class DiaryViewController: UIViewController {
     private func configureNavigationBarItems() {
         self.title = self.viewModel.diaryTitle
         
-        self.removeButton.image = #imageLiteral(resourceName: "baseline_delete_black_24pt")
+        self.removeButton.image = R.image.delete_black()
         self.removeButton.style = .plain
         self.removeButton.target = self
         self.removeButton.action = #selector(self.handleRemove)
