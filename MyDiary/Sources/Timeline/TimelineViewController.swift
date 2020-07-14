@@ -114,7 +114,7 @@ class TimelineViewController: UITableViewController {
     }
     
     @objc private func showSettings() {
-        let settingsController = SettingsController()
+        let settingsController = SettingsViewController()
         settingsController.viewModel = viewModel.settingsViewModel
         
         let backItem = UIBarButtonItem()

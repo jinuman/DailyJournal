@@ -10,7 +10,7 @@ import UIKit
 
 
 // env 에 주입시킬 세팅
-class InMemorySettings: Settings {
+struct InMemorySettings: Settings {
     var dateFormatOption: DateFormatOption = .default
     var fontSizeOption: FontSizeOption = .default
 }

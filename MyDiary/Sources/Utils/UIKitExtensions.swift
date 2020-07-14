@@ -43,6 +43,16 @@ extension UIColor {
     }
 }
 
+extension UITableView {
+    func register(_ cellType: UITableViewCell.Type) {
+        self.register(cellType, forCellReuseIdentifier: "\(cellType.self)")
+    }
+    
+    func dequeueReusableCell<T: UITableViewCell>(cellType: T.Type, for indexPath: IndexPath) -> T {
+        return dequeueReusableCell(withIdentifier: "\(T.self)", for: indexPath) as? T ?? T()
+    }
+}
+
 extension UIView {
     
     @discardableResult

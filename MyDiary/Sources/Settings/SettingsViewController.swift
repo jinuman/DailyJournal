@@ -9,17 +9,19 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
+    
     // MARK:- Properties
-    let settingsCellId = "settingsCellId"
+    
     var viewModel: SettingsViewModel!
     
-    // MARK:- Life Cycle methods
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "설정"
-        tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.register(SettingsCell.self, forCellReuseIdentifier: settingsCellId)
+        self.view.backgroundColor = .white
+        self.title = "설정"
+        self.tableView = UITableView(frame: .zero, style: .grouped)
+        self.tableView.register(SettingsCell.self)
     }
     
     deinit {
@@ -27,31 +29,45 @@ class SettingsViewController: UITableViewController {
     }
 }
 
-// MARK:- Regarding tableView methods
+// MARK: - Extensions
+
 extension SettingsViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows(in: section)
+    
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int)
+        -> Int
+    {
+        return self.viewModel.numberOfRows(in: section)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: settingsCellId) as? SettingsCell else {
-            fatalError("Settings cell is bad")
-        }
-        
-        cell.viewModel = viewModel.settingsCellViewModel(for: indexPath)
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(cellType: SettingsCell.self, for: indexPath)
+        cell.viewModel = self.viewModel.settingsCellViewModel(for: indexPath)
         return cell
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.numberOfSections
+        return self.viewModel.numberOfSections
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel.headerTitle(of: section)
+    override func tableView(
+        _ tableView: UITableView,
+        titleForHeaderInSection section: Int)
+        -> String?
+    {
+        return self.viewModel.headerTitle(of: section)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.selectOption(for: indexPath)
+    override func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath)
+    {
+        self.viewModel.selectOption(for: indexPath)
         tableView.reloadData()
     }
 }
