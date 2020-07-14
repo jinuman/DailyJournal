@@ -8,6 +8,7 @@
 ## Personal
 diary-demo/
 .idea/
+*.generated.swift
 
 ## Build generated
 build/
